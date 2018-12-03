@@ -11,8 +11,9 @@ import java.util.Set;
  *  Date:  2018-12-03
  *  Time: 5:42 PM
  *  Description: 写时复制。适用于读多于写的情况
+ *  即：写操作时，进行全部复制容器，并对复制的容器进行修改，再将原容器指向新容器。读的时候，读原容器。读写分离
  *  参考 CopyOnWriteArrayList 实现 CopyOnWriteMap
- *  简单实现黑名单添加与黑名单判断
+ *  并简单实现黑名单添加与黑名单判断
  **/
 public class CopyOnWriteMapApp {
 
