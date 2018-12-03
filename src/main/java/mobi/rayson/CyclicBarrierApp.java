@@ -11,13 +11,13 @@ import java.util.concurrent.CyclicBarrier;
  *  Description: 循环栅栏。实现一组线程等待至某一状态后再全部执行其他的任务。
  *  羊圈：等待羊群都醒来集合 --> 打开羊圈门，释放羊 --> 关门，等待下次放羊
  **/
-public class CyclicBarrierDemo {
+public class CyclicBarrierApp {
   public static void main(String[] args) {
     int parties = 4;
     // 创建栅栏，并向栅栏中丢入四个线程，并各自运行
     CyclicBarrier cyclicBarrier = new CyclicBarrier(parties);
     for (int i = 0; i < parties; i++) {
-      new Writer(cyclicBarrier).start();
+      new CyclicBarrierWriter(cyclicBarrier).start();
     }
 
     try {
@@ -28,16 +28,16 @@ public class CyclicBarrierDemo {
 
     System.out.println("循环：即 CyclicBarrier 可以被重用。");
     for (int i = 0; i < parties; i++) {
-      new Writer(cyclicBarrier).start();
+      new CyclicBarrierWriter(cyclicBarrier).start();
     }
   }
 }
 
-class Writer extends Thread {
+class CyclicBarrierWriter extends Thread {
 
   private CyclicBarrier cyclicBarrier;
 
-  Writer(CyclicBarrier cyclicBarrier) {
+  CyclicBarrierWriter(CyclicBarrier cyclicBarrier) {
     this.cyclicBarrier = cyclicBarrier;
   }
 

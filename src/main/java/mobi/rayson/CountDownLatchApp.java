@@ -7,25 +7,25 @@ import java.util.concurrent.CountDownLatch;
  *  User:  lirui
  *  Date:  2018-12-03
  *  Time: 11:23 AM
- *  Description:
+ *  Description: 二者比较相似
  *  CountDownLatch: 一个线程(或者多个)， 等待另外N个线程完成某个事情之后才能执行。
  *  CyclicBarrier: N个线程相互等待，任何一个线程完成之前，所有的线程都必须等待。
  **/
-public class CountDownLatchDemo {
+public class CountDownLatchApp {
   public static void main(String[] args) {
     int count = 2;
     final CountDownLatch latch = new CountDownLatch(count);
     for (int i = 0; i < count; i++) {
-      new Reader(latch).start();
+      new CountDownLatchReader(latch).start();
     }
   }
 }
 
-class Reader extends Thread {
+class CountDownLatchReader extends Thread {
 
   private CountDownLatch latch;
 
-  Reader(CountDownLatch latch) {
+  CountDownLatchReader(CountDownLatch latch) {
     this.latch = latch;
   }
 
