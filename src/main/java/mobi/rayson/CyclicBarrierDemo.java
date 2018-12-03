@@ -14,13 +14,14 @@ import java.util.concurrent.CyclicBarrier;
 public class CyclicBarrierDemo {
   public static void main(String[] args) {
     int parties = 4;
+    // 创建栅栏，并向栅栏中丢入四个线程，并各自运行
     CyclicBarrier cyclicBarrier = new CyclicBarrier(parties);
     for (int i = 0; i < parties; i++) {
       new Writer(cyclicBarrier).start();
     }
 
     try {
-      Thread.sleep(25000);
+      Thread.sleep(25000); // 模拟等待下次重用
     } catch (InterruptedException e) {
       e.printStackTrace();
     }
@@ -45,7 +46,7 @@ class Writer extends Thread {
     try {
       Thread.sleep(5000); // 模拟写入操作的耗时
       System.out.println(Thread.currentThread().getName() + ": 写入完成。");
-      cyclicBarrier.await(); // 挂起当前线程，直到所有线程都达到此时的状态
+      cyclicBarrier.await(); // 挂起当前线程，直到4个线程都调用了await()方法，这4个线程才继续往下执行
     } catch (InterruptedException | BrokenBarrierException e) {
       e.printStackTrace();
     }
