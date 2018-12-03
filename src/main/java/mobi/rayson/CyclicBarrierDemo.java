@@ -21,7 +21,7 @@ public class CyclicBarrierDemo {
     }
 
     try {
-      Thread.sleep(25000); // 模拟等待下次重用
+      Thread.sleep(10000); // 模拟等待下次重用
     } catch (InterruptedException e) {
       e.printStackTrace();
     }
@@ -42,9 +42,9 @@ class Writer extends Thread {
   }
 
   public void run() {
-    System.out.println(Thread.currentThread().getName() + ": 正在写数据。");
     try {
-      Thread.sleep(5000); // 模拟写入操作的耗时
+      System.out.println(Thread.currentThread().getName() + ": 正在写数据。");
+      Thread.sleep(2000); // 模拟写入操作的耗时
       System.out.println(Thread.currentThread().getName() + ": 写入完成。");
       cyclicBarrier.await(); // 挂起当前线程，直到4个线程都调用了await()方法，这4个线程才继续往下执行
     } catch (InterruptedException | BrokenBarrierException e) {
