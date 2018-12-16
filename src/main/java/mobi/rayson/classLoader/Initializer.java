@@ -5,7 +5,7 @@ package mobi.rayson.classLoader;
  *  User:  lirui
  *  Date:  2018-12-09
  *  Time: 6:38 PM
- *  Description: 初始化
+ *  Description: 类的初始化，针对的是整个类
  **/
 public class Initializer {
   public static void main(String[] args) {
