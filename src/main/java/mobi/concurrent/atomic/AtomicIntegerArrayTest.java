@@ -1,4 +1,4 @@
-package mobi.concurrent;
+package mobi.concurrent.atomic;
 
 import mobi.common.Note;
 
