@@ -3,6 +3,7 @@
 
 ## java.util.concurrent 包下的主要类
 > Atomic* 类通过关键字 volatile 和 CAS 算法实现操作的原子性
+> CAS 算法都是在 unsafe 类中实现，该类调用 native 方法
 > 通过反射以获取没有定义 getter 方法的变量 value 的值
 
 ### AtomicBoolean
@@ -13,3 +14,6 @@
 
 ### AtomicReference 
 > 引用类型的原子操作。与基本类型的原子操作原理一致
+
+### AtomicIntegerArray
+> 针对数组中的每个元素进行原子操作，与上述类似
