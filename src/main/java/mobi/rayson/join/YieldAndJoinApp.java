@@ -1,4 +1,4 @@
-package mobi.rayson;
+package mobi.rayson.join;
 
 /***
  *  Created with IntelliJ IDEA.
