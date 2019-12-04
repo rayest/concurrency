@@ -1,9 +1,7 @@
-package mobi.common;
+package mobi.rayson.common;
 
 import lombok.Data;
 import lombok.experimental.Accessors;
-
-import java.util.Comparator;
 
 @Data
 @Accessors(chain = true)

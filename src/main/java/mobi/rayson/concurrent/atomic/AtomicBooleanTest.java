@@ -1,6 +1,6 @@
-package mobi.concurrent.atomic;
+package mobi.rayson.concurrent.atomic;
 
-import mobi.common.Note;
+import mobi.rayson.common.Note;
 
 import java.lang.reflect.Field;
 import java.util.concurrent.atomic.AtomicBoolean;

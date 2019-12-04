@@ -1,7 +1,7 @@
-package mobi.concurrent.atomic;
+package mobi.rayson.concurrent.atomic;
 
-import mobi.common.Article;
-import mobi.common.Note;
+import mobi.rayson.common.Article;
+import mobi.rayson.common.Note;
 
 import java.util.concurrent.atomic.AtomicReference;
 

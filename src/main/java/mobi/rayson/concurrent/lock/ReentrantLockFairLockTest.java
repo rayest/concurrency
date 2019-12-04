@@ -1,8 +1,7 @@
-package mobi.concurrent.lock;
+package mobi.rayson.concurrent.lock;
 
-import mobi.common.Note;
+import mobi.rayson.common.Note;
 
-import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantLock;
 
 @Note("ReentrantLock 的公平锁测试")

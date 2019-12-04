@@ -1,4 +1,4 @@
-package mobi.common;
+package mobi.rayson.common;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;

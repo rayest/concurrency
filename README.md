@@ -27,3 +27,6 @@
 3. 每个线程都有一个许可(permit)，permit 只有两个值 1 和 0，默认是 0
 
 
+## 线程生命周期
+> new Thread() --> start(runnable) --> running(待CPU分配时间片后) --> blocked --> terminated
+

@@ -1,10 +1,6 @@
-package mobi.concurrent;
+package mobi.rayson.concurrent;
 
-import mobi.common.Note;
-import mobi.common.PriorityArticle;
-
-import java.util.concurrent.DelayQueue;
-import java.util.concurrent.PriorityBlockingQueue;
+import mobi.rayson.common.Note;
 
 @Note("DelayQueue 无界阻塞队列")
 public class DelayQueueTest {

@@ -1,7 +1,7 @@
-package mobi.concurrent;
+package mobi.rayson.concurrent;
 
-import mobi.common.Note;
-import mobi.common.PriorityArticle;
+import mobi.rayson.common.Note;
+import mobi.rayson.common.PriorityArticle;
 
 import java.util.concurrent.PriorityBlockingQueue;
 

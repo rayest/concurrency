@@ -1,4 +1,4 @@
-package mobi.common;
+package mobi.rayson.common;
 
 import lombok.Data;
 import lombok.experimental.Accessors;

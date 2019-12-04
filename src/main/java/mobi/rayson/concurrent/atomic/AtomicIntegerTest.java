@@ -1,11 +1,8 @@
-package mobi.concurrent.atomic;
+package mobi.rayson.concurrent.atomic;
 
-import mobi.common.Note;
+import mobi.rayson.common.Note;
 
-import java.lang.reflect.Field;
-import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.function.IntBinaryOperator;
 
 @Note("测试 AtomicInteger 类方法。原子性保证：通过 volatile 和 CAS 实现")
 public class AtomicIntegerTest {
