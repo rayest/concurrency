@@ -37,3 +37,4 @@
 * 在线程 t1 中调用线程 t2 的 interrupt 方法，即向 t2 发送中断消息，则 t2 设置为中断状态
 * 而 t1 的 sleep、wait、join 方法会收到该中断消息，并抛出 InterruptedException 异常
 * 自己可以打断自己
+* 可以通过判断中断状态，优雅退出线程
