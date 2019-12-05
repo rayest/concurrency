@@ -66,3 +66,7 @@
 * min(init)：初始大小
 * max：允许JVM创建的最大线程数
 * active：活跃的线程数
+
+## double check
+* 懒加载的单例模式会用到双重检查
+> new instance() 并不是原子操作，是三步操作
