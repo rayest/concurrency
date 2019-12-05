@@ -41,3 +41,6 @@
 
 ## synchronized
 * 对于多线程操作未受保护的共享变量，可能会因非原子操作而导致数据不一致
+* 在进入锁时汇编指令 monitorenter，退出时 monitorexit
+* 同步代码块
+* 同步方法
