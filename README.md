@@ -70,3 +70,21 @@
 ## double check
 * 懒加载的单例模式会用到双重检查
 > new instance() 并不是原子操作，是三步操作
+
+
+## volatile
+* 可见性、禁止重排序
+* 内存可见性：主内存和本地内存
+* 不保证原子性
+
+## 原子性、可见性、有序性
+
+## 可重入锁
+* synchronized
+> 可重入：通过对象计数器实现，每次请求计数器加一
+> 程序执行完后自动释放锁
+* ReentrantLock
+> 可重入：通过内部的 state 变量记录锁请求次数
+> 逐一释放所有的锁
+* ReentrantReadWriteLock
+> 与 ReentrantLock 同
