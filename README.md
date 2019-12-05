@@ -38,3 +38,6 @@
 * 而 t1 的 sleep、wait、join 方法会收到该中断消息，并抛出 InterruptedException 异常
 * 自己可以打断自己
 * 可以通过判断中断状态，优雅退出线程
+
+## synchronized
+* 对于多线程操作未受保护的共享变量，可能会因非原子操作而导致数据不一致
