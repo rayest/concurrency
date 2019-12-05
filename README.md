@@ -44,3 +44,17 @@
 * 在进入锁时汇编指令 monitorenter，退出时 monitorexit
 * 同步代码块 & 同步方法：锁的对象可能不同
 * 锁：抢占。被同步的方法或者代码块，线程需要去抢占锁，抢到后自己独享，待自己不需要后释放掉，以供其他线程使用
+
+## wait & notify 和 wait & notifyAll
+* wait: 当前线程进入等待，直到其他线程通过 notify 或者 notifyAll 方式唤醒
+* notify：一次只有一个线程可以被唤醒，然后该线程尝试去获得锁："object's monitor"
+* notifyAll：唤醒所有在该 object's monitor 上等待的线程，然后这些线程中只有一个可以最终抢到锁 
+
+## wait 与 sleep
+* sleep：
+> Thread.sleep()
+> sleep 不会释放当前线程锁，线程会阻塞在该方法上。在睡眠指定时间后自动唤醒
+
+* wait: 
+> object.wait()
+> wait 会释放当前线程会获取到的锁，且线程会被加入到请求该锁的等待队列中。需要被动唤醒
