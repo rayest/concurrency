@@ -1,4 +1,4 @@
-package mobi.rayson.customerLockTest;
+package mobi.rayson.LockCustomer;
 
 import java.util.ArrayList;
 import java.util.Collection;
