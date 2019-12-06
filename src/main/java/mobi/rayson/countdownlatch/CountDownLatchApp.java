@@ -1,4 +1,4 @@
-package mobi.rayson;
+package mobi.rayson.countdownlatch;
 
 import java.util.concurrent.CountDownLatch;
 
@@ -20,6 +20,13 @@ public class CountDownLatchApp {
       // 带着两个门栓去请求
       new CountDownLatchReader(latch).start();
     }
+    try {
+      latch.await(); // 等待 latch 为 0
+      System.out.println("门栓都扔了，继续执行余下的任务");
+    } catch (InterruptedException e) {
+      e.printStackTrace();
+    }
+
   }
 }
 

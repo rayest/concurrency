@@ -88,3 +88,12 @@
 > 逐一释放所有的锁
 * ReentrantReadWriteLock
 > 与 ReentrantLock 同
+
+## countDownLatch 和 CircleBarrier
+> CountDownLatch与CyclicBarrier都是用于控制并发的工具类，
+> 都可以理解成维护的就是一个计数器，但是这两者还是各有不同侧重点的：
+* CountDownLatch一般用于某个线程A等待若干个其他线程执行完任务之后，它才执行；
+* CyclicBarrier一般用于一组线程互相等待至某个状态，然后这一组线程再同时执行；
+* 调用CountDownLatch的countDown方法后，当前线程并不会阻塞，会继续往下执行
+* 而调用CyclicBarrier的await方法，会阻塞当前线程，直到CyclicBarrier指定的线程全部都到达了指定点的时候，才能继续往下执行；
+* CountDownLatch是不能复用的，而CyclicLatch是可以复用的。
